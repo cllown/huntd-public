@@ -53,17 +53,19 @@ export const RecruiterProfileSchema = gql`
   }
 
   type RecruiterProfile {
-    id: Int!
-    slug: String
-    status: RecruiterProfileStatus!
-    rejectReason: String
-    position: String
-    companyName: String
-    user: User
-    lastActionTime: GraphQLDateTime
-    statusesNotificationSentAt: GraphQLDateTime
-    activeConnectionWithCandidate(candidateProfileId: Int!): ProfileConnection
-  }
+  id: Int!
+  slug: String
+  status: RecruiterProfileStatus!
+  rejectReason: String
+  position: String
+  companyName: String
+  city: String 
+  user: User
+  lastActionTime: GraphQLDateTime
+  statusesNotificationSentAt: GraphQLDateTime
+  activeConnectionWithCandidate(candidateProfileId: Int!): ProfileConnection
+}
+
 
   input ReportOfferStatusValues {
     profileConnectionId: Int!
